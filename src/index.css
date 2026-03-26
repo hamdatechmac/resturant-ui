@@ -118,6 +118,14 @@ main {
   min-height: 100vh;
 }
 
+/* App Container Styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
 /* --- Shared typography helpers (matches your reference orange/white style) --- */
 .text-orange { color: var(--primary); }
 .text-grey { color: var(--text-grey); }

@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Landing from './pages/Landing';
 import CategoryMenu from './pages/CategoryMenu';
@@ -11,6 +12,10 @@ import AdminAuth from './pages/Admin/AdminAuth';
 import Footer from './components/Footer';
 
 function App() {
+  useEffect(() => {
+    console.log('App component mounted successfully');
+  }, []);
+
   return (
     <div className="app-container">
       <Navbar />
