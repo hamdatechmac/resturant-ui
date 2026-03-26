@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Landing from './pages/Landing';
 import CategoryMenu from './pages/CategoryMenu';
@@ -12,25 +12,23 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <div className="app-container">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/menu/:category" element={<CategoryMenu />} />
-            <Route path="/menu" element={<CategoryMenu />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/admin" element={<AdminAuth />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="app-container">
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/menu/:category" element={<CategoryMenu />} />
+          <Route path="/menu" element={<CategoryMenu />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<AdminAuth />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
